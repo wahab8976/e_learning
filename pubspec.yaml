@@ -1,0 +1,31 @@
+name: e_learning
+description: "A new Flutter project for iJogja e-learning."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  # Essential for the three onboarding dots in your design
+  smooth_page_indicator: ^1.2.0
+  # Recommended for high-quality, scalable illustrations
+  flutter_svg: ^2.0.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Registering your images
+  # Ensure your folder structure is: assets -> images -> your_file.png
+  assets:
+    - assets/images/
