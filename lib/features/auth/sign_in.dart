@@ -1,4 +1,5 @@
 import 'package:e_learning/features/auth/sign_up.dart';
+import 'package:e_learning/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -9,22 +10,26 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  // 1. Controllers for Sign In
+  //Controllers for Sign In
   final emailController = TextEditingController();
   final passController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView( // Essential for your 8GB RAM physical device testing to avoid overflow
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 60.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Header Image/Logo text to match iJogja branding
+              // Header Image/Logo
+
+              SizedBox(
+                height: 50,
+              ),
               const Text(
-                "ijogja",
+                "E-Learning",
                 style: TextStyle(
                   fontSize: 45,
                   color: Color(0xFFC62828),
@@ -34,7 +39,7 @@ class _SignInState extends State<SignIn> {
               ),
               const SizedBox(height: 50),
 
-              // 2. Email Field
+              // Email Field
               TextField(
                   controller: emailController,
                   decoration: InputDecoration(
@@ -43,7 +48,7 @@ class _SignInState extends State<SignIn> {
                   )),
               const SizedBox(height: 15),
 
-              // 3. Password Field with Toggle icon
+              // Password Field with Toggle icon
               TextField(
                   controller: passController,
                   obscureText: true,
@@ -53,7 +58,7 @@ class _SignInState extends State<SignIn> {
                     suffixIcon: const Icon(Icons.visibility_off_outlined),
                   )),
 
-              // 4. Forgot Password Link
+              // Forgot Password Link
               Align(
                 alignment: Alignment.centerRight,
                 child: TextButton(
@@ -67,12 +72,15 @@ class _SignInState extends State<SignIn> {
 
               const SizedBox(height: 10),
 
-              // 5. Sign In Button (Your requested format)
+              // Sign In Button
               SizedBox(
                 width: double.infinity,
                 height: 55,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Authentication Logic is Pending
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => HomePage()));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFC62828),
                     foregroundColor: Colors.white,

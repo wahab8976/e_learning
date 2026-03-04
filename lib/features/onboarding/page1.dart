@@ -48,7 +48,7 @@ class Page1 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 OutlinedButton( // Styled as "Back"
-                  onPressed: () {},
+                  onPressed: null,
                   child: const Text("Back"),
                 ),
                 ElevatedButton( // Styled as "Next"

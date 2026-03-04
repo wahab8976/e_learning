@@ -1,6 +1,6 @@
 import 'package:e_learning/features/auth/sign_in.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 
 class SignUp extends StatefulWidget {
   SignUp({super.key});
@@ -11,11 +11,11 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  TextEditingController name_controller = new TextEditingController();
-  TextEditingController phone_controller = new TextEditingController();
-  TextEditingController email_controller = new TextEditingController();
-  TextEditingController pass_controller = new TextEditingController();
-  TextEditingController pass_confirm_controller = new TextEditingController();
+  TextEditingController name_controller = TextEditingController();
+  TextEditingController phone_controller = TextEditingController();
+  TextEditingController email_controller = TextEditingController();
+  TextEditingController pass_controller = TextEditingController();
+  TextEditingController pass_confirm_controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +28,10 @@ class _SignUpState extends State<SignUp> {
           children: [
             Text("E Learning",
               style: TextStyle(
-                fontSize: 30,
-                  color: Color(0xFFC62828),
-                fontWeight: FontWeight(500)
+                fontSize: 45,
+                color: Color(0xFFC62828),
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
               ),
               ),
           TextField(
