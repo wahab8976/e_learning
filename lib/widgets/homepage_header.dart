@@ -1,3 +1,4 @@
+import 'package:e_learning/features/global_search/search.dart';
 import 'package:flutter/material.dart';
 
 
@@ -33,6 +34,11 @@ class HomepageHeader extends StatelessWidget {
           const SizedBox(height: 25),
           // Search Bar
           TextField(
+            onSubmitted: (String value){
+              if(value.isNotEmpty){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Search(initialQuery: value)));
+              }
+            },
             decoration: InputDecoration(
               hintText: "Search for book, e-library or profile",
               hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
