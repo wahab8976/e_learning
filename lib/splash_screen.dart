@@ -1,7 +1,9 @@
 import 'dart:async'; // Required for Timer
 import 'package:e_learning/features/onboarding/page1.dart';
+import 'package:e_learning/home/home_page.dart';
+import 'package:e_learning/main.dart';
 import 'package:flutter/material.dart';
-// import 'package:e_learning/signup_screen.dart'; // Import your signup file here
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,12 +16,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // 1. Move to SignUpScreen after 3 seconds
+    // Move to Bottom Navigation Screen after 3 seconds
     Timer(const Duration(seconds: 3), () {
       if (mounted) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const Page1()),
+          // Here main Screen Wrapper holds bottom navigation bar
+          MaterialPageRoute(builder: (context) => const MainScreenWrapper()),
         );
       }
     });
@@ -28,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xFFC62828), // Professional Red from your design
+      backgroundColor: Color(0xFFC62828),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

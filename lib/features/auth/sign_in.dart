@@ -24,7 +24,6 @@ class _SignInState extends State<SignIn> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Header Image/Logo
-
               SizedBox(
                 height: 50,
               ),
