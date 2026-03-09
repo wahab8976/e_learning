@@ -1,5 +1,6 @@
 import 'package:e_learning/home/home_page.dart';
 import 'package:e_learning/library/library.dart';
+import 'package:e_learning/notifications/notifications.dart';
 import 'package:e_learning/profile/user_profile.dart';
 import 'package:e_learning/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,7 @@ class _MainScreenWrapperState extends State<MainScreenWrapper> {
   final List<Widget> _pages = [
     const HomePage(),
     const Library(),
-    const Center(child: Text("Notifications")),
+    Notifications(),
     const UserProfile(),
   ];
 
